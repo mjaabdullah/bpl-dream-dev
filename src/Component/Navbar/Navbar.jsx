@@ -1,7 +1,7 @@
 import dolarIcon from '../../assets/DoubleDollar.png';
 import logoImg from '../../assets/logo.png';
 
-const Navbar = () => {
+const Navbar = ({ coin }) => {
     return (
         <>
     <div className="max-w-7xl mx-auto flex justify-between items-center py-4">
@@ -15,7 +15,7 @@ const Navbar = () => {
         <li>Teams</li>
         <li>Schedules</li>
     </ul>
-    <span className="btn">0 Coin <img src={dolarIcon} alt="$" /></span>
+    <span className="btn">{coin} Coin <img src={dolarIcon} alt="$" /></span>
   </div>
 </div>
         </>

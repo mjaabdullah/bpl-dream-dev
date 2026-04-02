@@ -1,6 +1,11 @@
 import heroImg from "../../assets/banner-main.png";
 import heroShadow from "../../assets/bg-shadow.png";
-const Hero = () => {
+const Hero = ({coin, setCoin}) => {
+    const claimCoin = () => {
+        const randomCoin = Math.floor(Math.random() * 200) + 1;
+        setCoin(coin + randomCoin);
+    }
+
     return (
         <div className="max-w-7xl mx-auto my-5 bg-gray-900 rounded-2xl overflow-hidden">
 <div
@@ -19,7 +24,7 @@ const Hero = () => {
         Beyond Boundaries Beyond Limits
       </p>
       <div className="inline-block p-2 border-2 border-yellow-400 rounded-2xl bg-transparent ">
-        <button className="btn btn-warning text-black font-semibold text-[14px] sm:text-xl px-8 sm:px-12 py-5 rounded-lg border-none hover:shadow-xl transition-all">
+        <button onClick={claimCoin} className="btn btn-warning text-black font-semibold text-[14px] sm:text-xl px-8 sm:px-12 py-5 rounded-lg border-none hover:shadow-xl transition-all">
           Claim Free Credit
         </button>
       </div>
