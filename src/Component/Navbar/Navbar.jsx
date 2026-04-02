@@ -4,12 +4,12 @@ import logoImg from '../../assets/logo.png';
 const Navbar = () => {
     return (
         <>
-    <div className="navbar max-w-7xl mx-auto">
-  <div className="navbar-start">
-    <img src={logoImg} alt="Logo" className='h-18 w-auto'/>
+    <div className="max-w-7xl mx-auto flex justify-between items-center py-4">
+  <div className="">
+    <img src={logoImg} alt="Logo" className='h-12 sm:h-18 w-auto'/>
   </div>
-  <div className="navbar-end gap-5">
-    <ul className='menu menu-vertical lg:menu-horizontal gap-6'>
+  <div className="space-x-4">
+    <ul className='menu menu-vertical md:menu-horizontal gap-6 hidden md:inline-flex'>
         <li>Home</li>
         <li>Fixture</li>
         <li>Teams</li>
